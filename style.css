@@ -1,0 +1,44 @@
+body{
+    background-color: aliceblue;
+}
+.canvas {
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid brown;
+    margin: 50px;
+    height: 400px;
+ 
+}
+
+.keyboard-row1 {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+    margin: 0 150px;
+}
+
+.keyboard-row2 {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+    margin: 0 150px;
+}
+
+.keyboard-row3 {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px;
+    margin: 150px;
+}
+
+.btn-key {
+    background-color: cornflowerblue;
+    text-align: center;
+    padding: 15px;
+    border: 2px solid black;
+}
