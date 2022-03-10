@@ -2,8 +2,13 @@ body{
     background-color: aliceblue;
 }
 
-h1, p{
+h1 {
     font-family: 'Quicksand', sans-serif;
+}
+
+p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
 }
 .canvas {
     background-color: beige;
