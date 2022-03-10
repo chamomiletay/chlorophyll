@@ -1,6 +1,10 @@
 body{
     background-color: aliceblue;
 }
+
+h1, p{
+    font-family: 'Quicksand', sans-serif;
+}
 .canvas {
     background-color: beige;
     display: flex;
@@ -25,6 +29,7 @@ body{
     background-color: darksalmon;
     border-radius: 3px;
     border: 2px dotted white;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .btn-key:hover {
