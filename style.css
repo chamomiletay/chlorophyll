@@ -30,8 +30,10 @@ h1, p{
     border-radius: 3px;
     border: 2px dotted white;
     font-family: 'Quicksand', sans-serif;
+    opacity: 0.6;
+    transition: 0.2s;
 }
 
 .btn-key:hover {
-    background-color: aqua;
+    opacity: 1;
 }
