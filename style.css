@@ -42,3 +42,14 @@ p {
 .btn-key:hover {
     opacity: 1;
 }
+
+.btn-key:focus {
+    background-color: white;
+}
+
+.secret-message {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin: 40px;
+}
