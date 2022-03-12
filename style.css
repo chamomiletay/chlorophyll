@@ -4,6 +4,7 @@ body{
 
 h1 {
     font-family: 'Quicksand', sans-serif;
+    color: cornflowerblue;
 }
 
 p {
@@ -49,7 +50,19 @@ p {
 
 .secret-message {
     display: flex;
-    justify-content: left;
-    align-items: left;
+    justify-content: center;
+    align-items: center;
     margin: 40px;
+    padding: 10px;
+    background-color: white;
+    border: 2px solid brown;
+    border-radius: 3%;
+    color: darkslateblue;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+}
+
+.secret-letter {
+    border-bottom: 2px solid brown;
+    padding: 10px;
 }

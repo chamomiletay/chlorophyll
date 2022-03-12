@@ -21,7 +21,7 @@
     // attach "how to play" link that links to set of instructions that player can access (or window prompt)
 
 //create event listener --> push letters to div on button press
-let secretMessage = document.querySelector('.secret-message');
+let secretMessage = document.querySelector('.secret-letter');
 let letterKey = document.querySelectorAll('.btn-key')
 
 letterKey.forEach(key => key.addEventListener('click', (event) => {
