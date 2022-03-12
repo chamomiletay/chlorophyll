@@ -20,64 +20,76 @@
     // power-up: player can gain a "life" that prevents them from taking "damage" upon incorrect responses
     // attach "how to play" link that links to set of instructions that player can access (or window prompt)
 
+
+
 //create event listener --> push letters to div on button press
-let secretMessage = document.querySelector('.secret-letter');
 let letterKey = document.querySelectorAll('.btn-key')
+
+//Letters that appear in secret message
+let secretMessageI = document.querySelector('.I');
+let secretMessageL = document.querySelector('.L');
+let secretMessageO = document.querySelector('.O');
+let secretMessageOTwo = document.querySelector('.OTwo');
+let secretMessageV = document.querySelector('.V');
+let secretMessageE = document.querySelector('.E');
+let secretMessageY = document.querySelector('.Y');
+let secretMessageU = document.querySelector('.U');
 
 letterKey.forEach(key => key.addEventListener('click', (event) => {
     event.preventDefault()
 
     if(event.target.value === "Q"){
-        secretMessage.innerHTML = "Q";
+        console.log('This letter is not in the hidden message. Womp womp.');
     } else if (event.target.value === "W"){
-        secretMessage.innerHTML = "W";
+        console.log('This letter is not in the hidden message. Womp womp.');
     } else if (event.target.value === "E"){
-        secretMessage.innerHTML = "E";
+        secretMessageE.innerHTML = "E";
     } else if (event.target.value === "R"){
-        secretMessage.innerHTML = "R";
+        console.log('This letter is not in the hidden message. Womp womp.');
     } else if (event.target.value === "T"){
-        secretMessage.innerHTML = "T";
+        console.log('This letter is not in the hidden message. Womp womp.');
     } else if (event.target.value === "Y"){
-        secretMessage.innerHTML = "Y";
+        secretMessageY.innerHTML = "Y";
     } else if (event.target.value === "U"){
-        secretMessage.innerHTML = "U";
+        secretMessageU.innerHTML = "U";
     } else if (event.target.value === "I"){
-        secretMessage.innerHTML = "I";
+        secretMessageI.innerHTML = "I";
     } else if (event.target.value === "O"){
-        secretMessage.innerHTML = "O";
+        secretMessageO.innerHTML = "O";
+        secretMessageOTwo.innerHTML = "O";
     } else if (event.target.value === "P"){
-        secretMessage.innerHTML = "P";
+        console.log('This letter is not in the hidden message. Womp womp.');
     } else if (event.target.value === "A"){
-        secretMessage.innerHTML = "A";
+        console.log('This letter is not in the hidden message. Womp womp.');
     } else if (event.target.value === "S"){
-        secretMessage.innerHTML = "S";
+        console.log('This letter is not in the hidden message. Womp womp.');
     } else if (event.target.value === "D"){
-        secretMessage.innerHTML = "D";
+        console.log('This letter is not in the hidden message. Womp womp.');
     } else if (event.target.value === "F"){
-        secretMessage.innerHTML = "F";
+        console.log('This letter is not in the hidden message. Womp womp.');
     } else if (event.target.value === "G"){
-        secretMessage.innerHTML = "G";
+        console.log('This letter is not in the hidden message. Womp womp.');
     } else if (event.target.value === "H"){
-        secretMessage.innerHTML = "H";
+        console.log('This letter is not in the hidden message. Womp womp.');
     } else if (event.target.value === "J"){
-        secretMessage.innerHTML = "J";
+        console.log('This letter is not in the hidden message. Womp womp.');
     } else if (event.target.value === "K"){
-        secretMessage.innerHTML = "K";
+        console.log('This letter is not in the hidden message. Womp womp.');
     } else if (event.target.value === "L"){
-        secretMessage.innerHTML = "L";
+        secretMessageL.innerHTML = "L";
     } else if (event.target.value === "Z"){
-        secretMessage.innerHTML = "Z";
+        console.log('This letter is not in the hidden message. Womp womp.');
     } else if (event.target.value === "X"){
-        secretMessage.innerHTML = "X";
+        console.log('This letter is not in the hidden message. Womp womp.');
     } else if (event.target.value === "C"){
-        secretMessage.innerHTML = "C";
+        console.log('This letter is not in the hidden message. Womp womp.');
     } else if (event.target.value === "V"){
-        secretMessage.innerHTML = "V";
+        secretMessageV.innerHTML = "V";
     } else if (event.target.value === "B"){
-        secretMessage.innerHTML = "B";
+        console.log('This letter is not in the hidden message. Womp womp.');
     } else if (event.target.value === "N"){
-        secretMessage.innerHTML = "N";
+        console.log('This letter is not in the hidden message. Womp womp.');
     } else if (event.target.value === "M"){
-        secretMessage.innerHTML = "M";
+        console.log('This letter is not in the hidden message. Womp womp.');
     }
 }))
