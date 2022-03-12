@@ -10,6 +10,7 @@ h1 {
 p {
     font-family: 'Quicksand', sans-serif;
     font-size: 14px;
+    text-align: right;
 }
 .canvas {
     background-color: beige;

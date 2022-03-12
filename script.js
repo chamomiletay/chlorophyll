@@ -1,13 +1,13 @@
 //Game Board
     // interactive image displays in middle of screen --> updates based on player input
-    // on-screen keyboard accepts user input
+    // on-screen keyboard accepts user input ✔
     // score and number of turns display on-screen
-    //correct letter responses will populate on screen into hidden message container
+    //correct letter responses will populate on screen into hidden message container ✔
     // incorrect letters should become disabled on keyboard once they are clicked once
 
 
 //Player
-    // can interact with keyboard (on-screen or external)
+    // can interact with keyboard (on-screen ✔ or external)
     // cannot click a letter more than once
     // 
 
@@ -23,7 +23,9 @@
 
 
 //create event listener --> push letters to div on button press
-let letterKey = document.querySelectorAll('.btn-key')
+let letterKey = document.querySelectorAll('.btn-key');
+let scoreTracker = document.querySelector('#score');
+let score = 0;
 
 //Letters that appear in secret message
 let secretMessageI = document.querySelector('.I');
@@ -35,6 +37,8 @@ let secretMessageE = document.querySelector('.E');
 let secretMessageY = document.querySelector('.Y');
 let secretMessageU = document.querySelector('.U');
 
+scoreTracker.innerHTML = score;
+
 letterKey.forEach(key => key.addEventListener('click', (event) => {
     event.preventDefault()
 
@@ -44,19 +48,29 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         console.log('This letter is not in the hidden message. Womp womp.');
     } else if (event.target.value === "E"){
         secretMessageE.innerHTML = "E";
+        score += 12.5;
+        scoreTracker.innerHTML = score;
     } else if (event.target.value === "R"){
         console.log('This letter is not in the hidden message. Womp womp.');
     } else if (event.target.value === "T"){
         console.log('This letter is not in the hidden message. Womp womp.');
     } else if (event.target.value === "Y"){
         secretMessageY.innerHTML = "Y";
+        score += 12.5;
+        scoreTracker.innerHTML = score;
     } else if (event.target.value === "U"){
         secretMessageU.innerHTML = "U";
+        score += 12.5;
+        scoreTracker.innerHTML = score;
     } else if (event.target.value === "I"){
         secretMessageI.innerHTML = "I";
+        score += 12.5;
+        scoreTracker.innerHTML = score;
     } else if (event.target.value === "O"){
         secretMessageO.innerHTML = "O";
         secretMessageOTwo.innerHTML = "O";
+        score += 25;
+        scoreTracker.innerHTML = score;
     } else if (event.target.value === "P"){
         console.log('This letter is not in the hidden message. Womp womp.');
     } else if (event.target.value === "A"){
@@ -77,6 +91,8 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         console.log('This letter is not in the hidden message. Womp womp.');
     } else if (event.target.value === "L"){
         secretMessageL.innerHTML = "L";
+        score += 12.5;
+        scoreTracker.innerHTML = score;
     } else if (event.target.value === "Z"){
         console.log('This letter is not in the hidden message. Womp womp.');
     } else if (event.target.value === "X"){
@@ -85,6 +101,8 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         console.log('This letter is not in the hidden message. Womp womp.');
     } else if (event.target.value === "V"){
         secretMessageV.innerHTML = "V";
+        score += 12.5;
+        scoreTracker.innerHTML = score;
     } else if (event.target.value === "B"){
         console.log('This letter is not in the hidden message. Womp womp.');
     } else if (event.target.value === "N"){
