@@ -1,19 +1,27 @@
 body{
-    background-color: aliceblue;
+    background-color:lavender;
+    border: 10px dashed lavenderblush;
+    border-radius: 2%;
+    padding: 4px;
 }
 
 h1 {
     font-family: 'Quicksand', sans-serif;
     color: cornflowerblue;
+    display: flex;
+    justify-content: center;
+    /* margin: 40px; */
+    padding: 40px 0 0 0;
 }
 
 p {
     font-family: 'Quicksand', sans-serif;
     font-size: 14px;
-    text-align: right;
+    display: flex;
+    justify-content: right;
 }
 .canvas {
-    background-color: beige;
+    background-color:lavenderblush;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,13 +31,19 @@ p {
  
 }
 
+img {
+    max-width: 350px;
+    max-height: 350px;
+}
+
+.keyboard-container {
+    padding: 0 0 30px 0;
+}
+
 .keyboard {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
-    border: 2px dotted brown;
-    border-radius: 3%;
 }
 
 .btn-key {
@@ -74,4 +88,8 @@ p {
 
 .secret-space {
     padding: 10px;
+}
+
+span {
+    margin: 0 10px 0 5px;
 }

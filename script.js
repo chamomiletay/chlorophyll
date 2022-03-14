@@ -1,7 +1,7 @@
 //Game Board
     // interactive image displays in middle of screen --> updates based on player input
     // on-screen keyboard accepts user input ✔
-    // score and number of turns display on-screen
+    // score and number of turns display on-screen ✔
     //correct letter responses will populate on screen into hidden message container ✔
     // incorrect letters should become disabled on keyboard once they are clicked once
 
@@ -46,11 +46,11 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
     event.preventDefault()
 
     if(event.target.value === "Q"){
-        console.log('This letter is not in the hidden message. Womp womp.');
+        console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
     } else if (event.target.value === "W"){
-        console.log('This letter is not in the hidden message. Womp womp.');
+        console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
     } else if (event.target.value === "E"){
@@ -60,11 +60,11 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         turns -= 1;
         turnsTracker.innerHTML = turns
     } else if (event.target.value === "R"){
-        console.log('This letter is not in the hidden message. Womp womp.');
+        console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
     } else if (event.target.value === "T"){
-        console.log('This letter is not in the hidden message. Womp womp.');
+        console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
     } else if (event.target.value === "Y"){
@@ -93,39 +93,39 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         turns -= 1;
         turnsTracker.innerHTML = turns
     } else if (event.target.value === "P"){
-        console.log('This letter is not in the hidden message. Womp womp.');
+        console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
     } else if (event.target.value === "A"){
-        console.log('This letter is not in the hidden message. Womp womp.');
+        console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
     } else if (event.target.value === "S"){
-        console.log('This letter is not in the hidden message. Womp womp.');
+        console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
     } else if (event.target.value === "D"){
-        console.log('This letter is not in the hidden message. Womp womp.');
+        console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
     } else if (event.target.value === "F"){
-        console.log('This letter is not in the hidden message. Womp womp.');
+        console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
     } else if (event.target.value === "G"){
-        console.log('This letter is not in the hidden message. Womp womp.');
+        console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
     } else if (event.target.value === "H"){
-        console.log('This letter is not in the hidden message. Womp womp.');
+        console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
     } else if (event.target.value === "J"){
-        console.log('This letter is not in the hidden message. Womp womp.');
+        console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
     } else if (event.target.value === "K"){
-        console.log('This letter is not in the hidden message. Womp womp.');
+        console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
     } else if (event.target.value === "L"){
@@ -135,15 +135,15 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         turns -= 1;
         turnsTracker.innerHTML = turns
     } else if (event.target.value === "Z"){
-        console.log('This letter is not in the hidden message. Womp womp.');
+        console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
     } else if (event.target.value === "X"){
-        console.log('This letter is not in the hidden message. Womp womp.');
+        console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
     } else if (event.target.value === "C"){
-        console.log('This letter is not in the hidden message. Womp womp.');
+        console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
     } else if (event.target.value === "V"){
@@ -153,15 +153,15 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         turns -= 1;
         turnsTracker.innerHTML = turns
     } else if (event.target.value === "B"){
-        console.log('This letter is not in the hidden message. Womp womp.');
+        console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
     } else if (event.target.value === "N"){
-        console.log('This letter is not in the hidden message. Womp womp.');
+        console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
     } else if (event.target.value === "M"){
-        console.log('This letter is not in the hidden message. Womp womp.');
+        console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
     }
