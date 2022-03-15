@@ -49,10 +49,14 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
+        score -= 12.5;
+        scoreTracker.innerHTML = score;
     } else if (event.target.value === "W"){
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
+        score -= 12.5;
+        scoreTracker.innerHTML = score;
     } else if (event.target.value === "E"){
         secretMessageE.innerHTML = "E";
         score += 12.5;
@@ -63,10 +67,14 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
+        score -= 12.5;
+        scoreTracker.innerHTML = score;
     } else if (event.target.value === "T"){
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
+        score -= 12.5;
+        scoreTracker.innerHTML = score;
     } else if (event.target.value === "Y"){
         secretMessageY.innerHTML = "Y";
         score += 12.5;
@@ -96,38 +104,56 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
+        score -= 12.5;
+        scoreTracker.innerHTML = score;
     } else if (event.target.value === "A"){
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
+        score -= 12.5;
+        scoreTracker.innerHTML = score;
     } else if (event.target.value === "S"){
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
+        score -= 12.5;
+        scoreTracker.innerHTML = score;
     } else if (event.target.value === "D"){
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
+        score -= 12.5;
+        scoreTracker.innerHTML = score;
     } else if (event.target.value === "F"){
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
+        score -= 12.5;
+        scoreTracker.innerHTML = score;
     } else if (event.target.value === "G"){
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
+        score -= 12.5;
+        scoreTracker.innerHTML = score;
     } else if (event.target.value === "H"){
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
+        score -= 12.5;
+        scoreTracker.innerHTML = score;
     } else if (event.target.value === "J"){
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
+        score -= 12.5;
+        scoreTracker.innerHTML = score;
     } else if (event.target.value === "K"){
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
+        score -= 12.5;
+        scoreTracker.innerHTML = score;
     } else if (event.target.value === "L"){
         secretMessageL.innerHTML = "L";
         score += 12.5;
@@ -138,14 +164,20 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
+        score -= 12.5;
+        scoreTracker.innerHTML = score;
     } else if (event.target.value === "X"){
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
+        score -= 12.5;
+        scoreTracker.innerHTML = score;
     } else if (event.target.value === "C"){
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
+        score -= 12.5;
+        scoreTracker.innerHTML = score;
     } else if (event.target.value === "V"){
         secretMessageV.innerHTML = "V";
         score += 12.5;
@@ -156,13 +188,19 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
+        score -= 12.5;
+        scoreTracker.innerHTML = score;
     } else if (event.target.value === "N"){
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
+        score -= 12.5;
+        scoreTracker.innerHTML = score;
     } else if (event.target.value === "M"){
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
         turnsTracker.innerHTML = turns
+        score -= 12.5;
+        scoreTracker.innerHTML = score;
     }
 }))
