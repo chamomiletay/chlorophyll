@@ -93,3 +93,14 @@ img {
 span {
     margin: 0 10px 0 5px;
 }
+
+.disabledBtn {
+    margin: 5px;
+    padding: 10px;
+    background-color: red;
+    border-radius: 3px;
+    border: 2px solid brown;
+    font-family: 'Quicksand', sans-serif;
+    opacity: 0.6;
+    transition: 0.2s;
+}
