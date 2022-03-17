@@ -29,6 +29,7 @@ let turnsTracker = document.querySelector('#turns');
 let score = 0;
 let turns = 20;
 let guessedLetter = false;
+let numCorrect = 0;
 
 //Letters that appear in secret message
 let secretMessageD = document.querySelector('.D');
@@ -78,6 +79,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         score -= 4;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
+        numCorrect += 1;
     } else if (event.target.value === "W"){
         secretMessageW.innerHTML = "W";
         turns -= 1;
@@ -85,6 +87,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         score += 4;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
+        numCorrect += 1;
     } else if (event.target.value === "E"){
         secretMessageE.innerHTML = "E";
         secretMessageEtwo.innerHTML = "E";
@@ -94,6 +97,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         turns -= 1;
         turnsTracker.innerHTML = turns
         guessedLetter = true;
+        numCorrect += 3;
     } else if (event.target.value === "R"){
         secretMessageR.innerHTML = "R";
         secretMessageRtwo.innerHTML = "R";
@@ -103,6 +107,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         score += 12;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
+        numCorrect += 3;
     } else if (event.target.value === "T"){
         secretMessageT.innerHTML = "T";
         secretMessageTtwo.innerHTML = "T";
@@ -113,6 +118,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         score += 16;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
+        numCorrect += 4;
     } else if (event.target.value === "Y"){
         secretMessageY.innerHTML = "Y";
         score += 4;
@@ -120,6 +126,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         turns -= 1;
         turnsTracker.innerHTML = turns
         guessedLetter = true;
+        numCorrect += 1;
     } else if (event.target.value === "U"){
         secretMessageU.innerHTML = "U";
         score += 4;
@@ -127,6 +134,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         turns -= 1;
         turnsTracker.innerHTML = turns
         guessedLetter = true;
+        numCorrect += 1;
     } else if (event.target.value === "I"){
         console.error('This letter is not in the hidden message. Womp womp.');
         score -= 4;
@@ -144,6 +152,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         turns -= 1;
         turnsTracker.innerHTML = turns
         guessedLetter = true;
+        numCorrect += 4;
     } else if (event.target.value === "P"){
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
@@ -158,6 +167,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         score += 4;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
+        numCorrect += 1;
     } else if (event.target.value === "S"){
         secretMessageS.innerHTML = "S";
         turns -= 1;
@@ -165,6 +175,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         score += 4;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
+        numCorrect += 1;
     } else if (event.target.value === "D"){
         secretMessageD.innerHTML = "D";
         turns -= 1;
@@ -172,6 +183,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         score += 4;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
+        numCorrect += 1;
     } else if (event.target.value === "F"){
         secretMessageF.innerHTML = "F";
         secretMessageFtwo.innerHTML = "F";
@@ -180,6 +192,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         score += 8;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
+        numCorrect += 2;
     } else if (event.target.value === "G"){
         secretMessageG.innerHTML = "G";
         turns -= 1;
@@ -187,6 +200,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         score += 4;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
+        numCorrect += 1;
     } else if (event.target.value === "H"){
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
@@ -215,6 +229,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         turns -= 1;
         turnsTracker.innerHTML = turns
         guessedLetter = true;
+        numCorrect += 1;
     } else if (event.target.value === "Z"){
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
@@ -257,6 +272,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         score += 4;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
+        numCorrect += 1;
     } else if (event.target.value === "M"){
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
@@ -273,6 +289,11 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         turnsTracker.innerHTML = 0;
         window.alert('GAME OVER')
         console.log(event)
+        disable();
+        
+    } else if (numCorrect === 25) {
+        window.alert(`CONGRATULATIONS! YOU'VE DECODED THE HIDDEN MESSAGE!`)
+        disable();
     }
     // Button becomes disabled after being clicked once
     if (guessedLetter === true){
@@ -280,12 +301,27 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         event.target.setAttribute('class', 'disabledBtn');
     }
 
-    // let keyboardBtn = document.getElementsByTagName('input');
-
-    // if (guessedLetter === false && turns === -1){
-    //     keyboardBtn.setAttribute('disabled', 'disabled');
-    //     keyboardBtn.setAttribute('class', 'disabledBtn');
-    // }
+    let keyboardBtn = document.querySelectorAll('.btn-key')
     
+    if (guessedLetter === false && turns === -1){
+        keyboardBtn.setAttribute('disabled', 'disabled');
+        keyboardBtn.setAttribute('class', 'disabledBtn');
+}
+
 }))
 
+
+
+
+
+function disable() {
+for (let i = 0; i < letterKey.length; i++) {
+    letterKey[i].setAttribute('disabled', 'disabled');
+    letterKey[i].setAttribute('class', 'disabledBtn');
+    }
+
+}
+
+// if (turns === -1) {
+//     disable()
+// }
