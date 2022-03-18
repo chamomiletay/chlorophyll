@@ -30,6 +30,7 @@ let score = 0;
 let turns = 20;
 let guessedLetter = false;
 let numCorrect = 0;
+let correctLetter = null;
 
 //Letters that appear in secret message
 let secretMessageD = document.querySelector('.D');
@@ -79,6 +80,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         score -= 4;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
+        correctLetter = false;
     } else if (event.target.value === "W"){
         secretMessageW.innerHTML = "W";
         turns -= 1;
@@ -87,6 +89,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         scoreTracker.innerHTML = score;
         guessedLetter = true;
         numCorrect += 1;
+        correctLetter = true;
     } else if (event.target.value === "E"){
         secretMessageE.innerHTML = "E";
         secretMessageEtwo.innerHTML = "E";
@@ -97,6 +100,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         turnsTracker.innerHTML = turns
         guessedLetter = true;
         numCorrect += 3;
+        correctLetter = true;
     } else if (event.target.value === "R"){
         secretMessageR.innerHTML = "R";
         secretMessageRtwo.innerHTML = "R";
@@ -107,6 +111,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         scoreTracker.innerHTML = score;
         guessedLetter = true;
         numCorrect += 3;
+        correctLetter = true;
     } else if (event.target.value === "T"){
         secretMessageT.innerHTML = "T";
         secretMessageTtwo.innerHTML = "T";
@@ -118,6 +123,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         scoreTracker.innerHTML = score;
         guessedLetter = true;
         numCorrect += 4;
+        correctLetter = true;
     } else if (event.target.value === "Y"){
         secretMessageY.innerHTML = "Y";
         score += 4;
@@ -126,6 +132,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         turnsTracker.innerHTML = turns
         guessedLetter = true;
         numCorrect += 1;
+        correctLetter = true;
     } else if (event.target.value === "U"){
         secretMessageU.innerHTML = "U";
         score += 4;
@@ -134,6 +141,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         turnsTracker.innerHTML = turns
         guessedLetter = true;
         numCorrect += 1;
+        correctLetter = true;
     } else if (event.target.value === "I"){
         console.error('This letter is not in the hidden message. Womp womp.');
         score -= 4;
@@ -141,6 +149,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         turns -= 1;
         turnsTracker.innerHTML = turns
         guessedLetter = true;
+        correctLetter = false;
     } else if (event.target.value === "O"){
         secretMessageO.innerHTML = "O";
         secretMessageOTwo.innerHTML = "O";
@@ -152,6 +161,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         turnsTracker.innerHTML = turns
         guessedLetter = true;
         numCorrect += 4;
+        correctLetter = true;
     } else if (event.target.value === "P"){
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
@@ -159,6 +169,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         score -= 4;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
+        correctLetter = false;
     } else if (event.target.value === "A"){
         secretMessageA.innerHTML = "A";
         turns -= 1;
@@ -167,6 +178,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         scoreTracker.innerHTML = score;
         guessedLetter = true;
         numCorrect += 1;
+        correctLetter = true;
     } else if (event.target.value === "S"){
         secretMessageS.innerHTML = "S";
         turns -= 1;
@@ -175,6 +187,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         scoreTracker.innerHTML = score;
         guessedLetter = true;
         numCorrect += 1;
+        correctLetter = true;
     } else if (event.target.value === "D"){
         secretMessageD.innerHTML = "D";
         turns -= 1;
@@ -183,6 +196,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         scoreTracker.innerHTML = score;
         guessedLetter = true;
         numCorrect += 1;
+        correctLetter = true;
     } else if (event.target.value === "F"){
         secretMessageF.innerHTML = "F";
         secretMessageFtwo.innerHTML = "F";
@@ -192,6 +206,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         scoreTracker.innerHTML = score;
         guessedLetter = true;
         numCorrect += 2;
+        correctLetter = true;
     } else if (event.target.value === "G"){
         secretMessageG.innerHTML = "G";
         turns -= 1;
@@ -200,6 +215,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         scoreTracker.innerHTML = score;
         guessedLetter = true;
         numCorrect += 1;
+        correctLetter = true;
     } else if (event.target.value === "H"){
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
@@ -207,6 +223,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         score -= 4;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
+        correctLetter = false;
     } else if (event.target.value === "J"){
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
@@ -214,6 +231,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         score -= 4;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
+        correctLetter = false;
     } else if (event.target.value === "K"){
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
@@ -221,6 +239,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         score -= 4;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
+        correctLetter = false;
     } else if (event.target.value === "L"){
         secretMessageL.innerHTML = "L";
         score += 4;
@@ -229,6 +248,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         turnsTracker.innerHTML = turns
         guessedLetter = true;
         numCorrect += 1;
+        correctLetter = true;
     } else if (event.target.value === "Z"){
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
@@ -236,6 +256,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         score -= 4;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
+        correctLetter = false;
     } else if (event.target.value === "X"){
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
@@ -243,6 +264,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         score -= 4;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
+        correctLetter = false;
     } else if (event.target.value === "C"){
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
@@ -250,6 +272,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         score -= 4;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
+        correctLetter = false;
     } else if (event.target.value === "V"){
         console.error('This letter is not in the hidden message. Womp womp.');
         score -= 4;
@@ -257,6 +280,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         turns -= 1;
         turnsTracker.innerHTML = turns
         guessedLetter = true;
+        correctLetter = false;
     } else if (event.target.value === "B"){
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
@@ -264,6 +288,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         score -= 4;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
+        correctLetter = false;
     } else if (event.target.value === "N"){
         secretMessageN.innerHTML = "N";
         turns -= 1;
@@ -272,6 +297,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         scoreTracker.innerHTML = score;
         guessedLetter = true;
         numCorrect += 1;
+        correctLetter = true;
     } else if (event.target.value === "M"){
         console.error('This letter is not in the hidden message. Womp womp.');
         turns -= 1;
@@ -279,6 +305,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         score -= 4;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
+        correctLetter = false;
     }
 
     //score should not display number lower than zero
@@ -287,6 +314,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
     }
 
     //Prompt user that they have run out of turns (also check if win condition is false)
+    //WIN CONDITION
     if (turns === -1) {
         turnsTracker.innerHTML = 0;
         window.alert('GAME OVER')
@@ -298,7 +326,10 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         disable();
     }
     // Button becomes disabled after being clicked once
-    if (guessedLetter === true){
+    if (guessedLetter === true && correctLetter === false){
+        event.target.setAttribute('disabled', 'disabled');
+        event.target.setAttribute('class', 'disabledBtnFalse');
+    } else if (guessedLetter === true && correctLetter === true){
         event.target.setAttribute('disabled', 'disabled');
         event.target.setAttribute('class', 'disabledBtn');
     }
@@ -308,7 +339,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
     if (guessedLetter === false && turns === -1){
         keyboardBtn.setAttribute('disabled', 'disabled');
         keyboardBtn.setAttribute('class', 'disabledBtn');
-}
+}   
 
 }))
 
