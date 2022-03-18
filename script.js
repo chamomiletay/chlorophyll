@@ -331,7 +331,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         event.target.setAttribute('class', 'disabledBtnFalse');
     } else if (guessedLetter === true && correctLetter === true){
         event.target.setAttribute('disabled', 'disabled');
-        event.target.setAttribute('class', 'disabledBtn');
+        event.target.setAttribute('class', 'disabledBtnTrue');
     }
 
     let keyboardBtn = document.querySelectorAll('.btn-key')
@@ -343,9 +343,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
 
 }))
 
-
-
-
+let btnCorrect = document.querySelector('.disabledBtnTrue');
 
 function disable() {
 for (let i = 0; i < letterKey.length; i++) {
@@ -353,6 +351,7 @@ for (let i = 0; i < letterKey.length; i++) {
     letterKey[i].setAttribute('class', 'disabledBtn');
     }
 
+    btnCorrect.setAttribute('class', 'disabledBtn');
 }
 
 // if (turns === -1) {
