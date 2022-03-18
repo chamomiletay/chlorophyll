@@ -9,11 +9,11 @@
 //Player
     // can interact with keyboard (on-screen ✔ or external)
     // cannot click a letter more than once ✔
-    // cannot progress once turns left = 0 --> window.alert("GAME OVER")
+    // cannot progress once turns left = 0 --> window.alert("GAME OVER")✔
 
 
 //Win Condition
-    // player solves hidden message before number of turns is depleted
+    // player solves hidden message before number of turns is depleted ✔
     // "restart puzzle" button appears once message is decoded
 
 //Stretch Goals
@@ -79,7 +79,6 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         score -= 4;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
-        numCorrect += 1;
     } else if (event.target.value === "W"){
         secretMessageW.innerHTML = "W";
         turns -= 1;
@@ -282,9 +281,12 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         guessedLetter = true;
     }
 
-    //Prompt user that they have run out of turns (also check if win condition is false)
-    
+    //score should not display number lower than zero
+    if (score < 0) {
+        scoreTracker.innerHTML = '0';
+    }
 
+    //Prompt user that they have run out of turns (also check if win condition is false)
     if (turns === -1) {
         turnsTracker.innerHTML = 0;
         window.alert('GAME OVER')
