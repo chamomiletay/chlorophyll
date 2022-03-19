@@ -1,4 +1,6 @@
 body{
+    background-image: url('bg.png');
+    background-size: contain;
     background-color:lavender;
     border: 10px dashed lavenderblush;
     border-radius: 2%;
