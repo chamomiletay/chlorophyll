@@ -70,6 +70,8 @@ let secretMessageL = document.querySelector('.L');
 scoreTracker.innerHTML = score;
 turnsTracker.innerHTML = turns;
 
+
+//Event listener --> listen for click on keyboard displayed on screen
 letterKey.forEach(key => key.addEventListener('click', (event) => {
     event.preventDefault()
 
@@ -341,8 +343,25 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         keyboardBtn.setAttribute('class', 'disabledBtn');
 }   
 
+
+//Make your plant GROW !!
+let img = document.querySelector('.plant');
+
+if (score > 8 && score < 24){
+    img.src = 'frame1.gif';
+} else if (score > 24 && score < 40){
+    img.src = 'frame2.gif';
+} else if (score > 40 && score < 56){
+    img.src = 'frame3.gif'
+} else if (score > 56 && score < 80){
+    img.src = 'frame4.gif'
+} else if (score > 90 && score < 100){
+    img.src = 'frame5.gif'
+}
+
 }))
 
+//Create function to disable each button once win condition is met
 let btnCorrect = document.querySelector('.disabledBtnTrue');
 
 function disable() {
@@ -351,9 +370,6 @@ for (let i = 0; i < letterKey.length; i++) {
     letterKey[i].setAttribute('class', 'disabledBtn');
     }
 
-    btnCorrect.setAttribute('class', 'disabledBtn');
+    // btnCorrect.setAttribute('class', 'disabledBtn');
 }
 
-// if (turns === -1) {
-//     disable()
-// }
