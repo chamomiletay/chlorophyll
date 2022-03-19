@@ -346,9 +346,13 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         scoreTracker.innerHTML = '0';
     }
 
+    if (turns < 0){
+        turnsTracker.innerHTML = '0';
+    }
+
     //Prompt user that they have run out of turns (also check if win condition is false)
     //WIN CONDITION
-    if (turns === -1) {
+    if (turns === -1 && numCorrect !== 25) {
         turnsTracker.innerHTML = 0;
         window.alert('GAME OVER')
         console.log(event)
@@ -653,8 +657,12 @@ input.addEventListener('keydown', (event) => {
         scoreTracker.innerHTML = '0';
     }
 
+    if (turns < 0){
+        turnsTracker.innerHTML = '0';
+    }
+
     //WIN CONDITION
-    if (turns === -1) {
+    if (turns === -1 && numCorrect !== 25) {
         turnsTracker.innerHTML = 0;
         window.alert('GAME OVER')
         console.log(event)

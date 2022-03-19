@@ -12,13 +12,15 @@
 <body>
     
 <h1>⚘ CHLOROPHYLL ⚘</h1>
+<h2>What will you grow today?</h2>
 <p>SCORE: <span id="score"></span></p>
 <p>TURNS LEFT: <span id="turns"></span></p>
 
 <div class="canvas">
-<img class="plant" src="plant-pot.gif">
+<img class="plant" src="plant-pot.gif" alt="Growing plant animation">
 </div>
 
+<div class="message-container">
 <!-- Secret message is: "Don't forget to water yourself"-->
 <div class="secret-message">
     <div class="secret-letter D"></div>
@@ -62,9 +64,10 @@
     <div class="secret-letter L"></div>
     <div class="secret-letter F-2"></div>
     ♡
+    </div>
 </div>
 
-<p id="instructions">Can you solve the hidden message?</p>
+<p id="instructions">Try to solve the hidden message!</p>
 <!--User can input letters w/ external keyboard -->
 <form>
     <input id="player-input" placeholder="Type a letter here!">
@@ -73,7 +76,7 @@
 
 
 <!-- or they may select letters w/ the on-screen keyboard-->
-<p id="type-letter">OR....click a letter!</p>
+<p id="type-letter">OR....click a letter below using the on-screen keypad!</p>
 <div class = keyboard-container>
     <div class="keyboard">
     <!-- 1st row -->
