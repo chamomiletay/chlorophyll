@@ -26,6 +26,10 @@
 let letterKey = document.querySelectorAll('.btn-key');
 let scoreTracker = document.querySelector('#score');
 let turnsTracker = document.querySelector('#turns');
+let resetBtn = document.querySelector('#reset-btn');
+let submitBtn = document.querySelector('#submit');
+let input = document.querySelector('#player-input');
+
 let score = 0;
 let turns = 20;
 let guessedLetter = false;
@@ -360,6 +364,253 @@ if (score > 8 && score < 24){
 }
 
 }))
+
+//EXTERNAL KEYBOARD EVENT LISTENER
+input.addEventListener('keydown', (event) => {
+    // event.preventDefault();
+
+    if(event.key === 'q'){
+        console.error('This letter is not in the hidden message. Womp womp.');
+        turns -= 1;
+        turnsTracker.innerHTML = turns
+        score -= 4;
+        scoreTracker.innerHTML = score;
+        guessedLetter = true;
+        correctLetter = false;
+    } else if (event.key === 'w'){
+        secretMessageW.innerHTML = "W";
+        turns -= 1;
+        turnsTracker.innerHTML = turns
+        score += 4;
+        scoreTracker.innerHTML = score;
+        guessedLetter = true;
+        numCorrect += 1;
+        correctLetter = true;
+    } else if (event.key === 'e'){
+        secretMessageE.innerHTML = "E";
+        secretMessageEtwo.innerHTML = "E";
+        secretMessageEthree.innerHTML = "E";
+        score += 12;
+        scoreTracker.innerHTML = score;
+        turns -= 1;
+        turnsTracker.innerHTML = turns
+        guessedLetter = true;
+        numCorrect += 3;
+        correctLetter = true;
+    } else if (event.key === 'r'){
+        secretMessageR.innerHTML = "R";
+        secretMessageRtwo.innerHTML = "R";
+        secretMessageRthree.innerHTML = "R";
+        turns -= 1;
+        turnsTracker.innerHTML = turns
+        score += 12;
+        scoreTracker.innerHTML = score;
+        guessedLetter = true;
+        numCorrect += 3;
+        correctLetter = true;
+    } else if (event.key === 't'){
+        secretMessageT.innerHTML = "T";
+        secretMessageTtwo.innerHTML = "T";
+        secretMessageTthree.innerHTML = "T";
+        secretMessageTfour.innerHTML = "T";
+        turns -= 1;
+        turnsTracker.innerHTML = turns
+        score += 16;
+        scoreTracker.innerHTML = score;
+        guessedLetter = true;
+        numCorrect += 4;
+        correctLetter = true;
+    } else if (event.key === 'y'){
+        secretMessageY.innerHTML = "Y";
+        score += 4;
+        scoreTracker.innerHTML = score;
+        turns -= 1;
+        turnsTracker.innerHTML = turns
+        guessedLetter = true;
+        numCorrect += 1;
+        correctLetter = true;
+    } else if (event.key === 'u'){
+        secretMessageU.innerHTML = "U";
+        score += 4;
+        scoreTracker.innerHTML = score;
+        turns -= 1;
+        turnsTracker.innerHTML = turns
+        guessedLetter = true;
+        numCorrect += 1;
+        correctLetter = true;
+    } else if (event.key === 'i'){
+        console.error('This letter is not in the hidden message. Womp womp.');
+        score -= 4;
+        scoreTracker.innerHTML = score;
+        turns -= 1;
+        turnsTracker.innerHTML = turns
+        guessedLetter = true;
+        correctLetter = false;
+    } else if (event.key === 'o'){
+        secretMessageO.innerHTML = "O";
+        secretMessageOTwo.innerHTML = "O";
+        secretMessageOThree.innerHTML = "O";
+        secretMessageOFour.innerHTML = "O";
+        score += 16;
+        scoreTracker.innerHTML = score;
+        turns -= 1;
+        turnsTracker.innerHTML = turns
+        guessedLetter = true;
+        numCorrect += 4;
+        correctLetter = true;
+    } else if (event.key === 'p'){
+        console.error('This letter is not in the hidden message. Womp womp.');
+        turns -= 1;
+        turnsTracker.innerHTML = turns
+        score -= 4;
+        scoreTracker.innerHTML = score;
+        guessedLetter = true;
+        correctLetter = false;
+    } else if (event.key === 'a'){
+        secretMessageA.innerHTML = "A";
+        turns -= 1;
+        turnsTracker.innerHTML = turns
+        score += 4;
+        scoreTracker.innerHTML = score;
+        guessedLetter = true;
+        numCorrect += 1;
+        correctLetter = true;
+    } else if (event.key === 's'){
+        secretMessageS.innerHTML = "S";
+        turns -= 1;
+        turnsTracker.innerHTML = turns
+        score += 4;
+        scoreTracker.innerHTML = score;
+        guessedLetter = true;
+        numCorrect += 1;
+        correctLetter = true;
+    } else if (event.key === 'd'){
+        secretMessageD.innerHTML = "D";
+        turns -= 1;
+        turnsTracker.innerHTML = turns
+        score += 4;
+        scoreTracker.innerHTML = score;
+        guessedLetter = true;
+        numCorrect += 1;
+        correctLetter = true;
+    } else if (event.key === 'f'){
+        secretMessageF.innerHTML = "F";
+        secretMessageFtwo.innerHTML = "F";
+        turns -= 1;
+        turnsTracker.innerHTML = turns
+        score += 8;
+        scoreTracker.innerHTML = score;
+        guessedLetter = true;
+        numCorrect += 2;
+        correctLetter = true;
+    } else if (event.key === 'g'){
+        secretMessageG.innerHTML = "G";
+        turns -= 1;
+        turnsTracker.innerHTML = turns
+        score += 4;
+        scoreTracker.innerHTML = score;
+        guessedLetter = true;
+        numCorrect += 1;
+        correctLetter = true;
+    } else if (event.key === 'h'){
+        console.error('This letter is not in the hidden message. Womp womp.');
+        turns -= 1;
+        turnsTracker.innerHTML = turns
+        score -= 4;
+        scoreTracker.innerHTML = score;
+        guessedLetter = true;
+        correctLetter = false;
+    } else if (event.key === 'j'){
+        console.error('This letter is not in the hidden message. Womp womp.');
+        turns -= 1;
+        turnsTracker.innerHTML = turns
+        score -= 4;
+        scoreTracker.innerHTML = score;
+        guessedLetter = true;
+        correctLetter = false;
+    } else if (event.key === 'k'){
+        console.error('This letter is not in the hidden message. Womp womp.');
+        turns -= 1;
+        turnsTracker.innerHTML = turns
+        score -= 4;
+        scoreTracker.innerHTML = score;
+        guessedLetter = true;
+        correctLetter = false;
+    } else if (event.key === 'l'){
+        secretMessageL.innerHTML = "L";
+        score += 4;
+        scoreTracker.innerHTML = score;
+        turns -= 1;
+        turnsTracker.innerHTML = turns
+        guessedLetter = true;
+        numCorrect += 1;
+        correctLetter = true;
+    } else if (event.key === 'z'){
+        console.error('This letter is not in the hidden message. Womp womp.');
+        turns -= 1;
+        turnsTracker.innerHTML = turns
+        score -= 4;
+        scoreTracker.innerHTML = score;
+        guessedLetter = true;
+        correctLetter = false;
+    } else if (event.key === 'x'){
+        console.error('This letter is not in the hidden message. Womp womp.');
+        turns -= 1;
+        turnsTracker.innerHTML = turns
+        score -= 4;
+        scoreTracker.innerHTML = score;
+        guessedLetter = true;
+        correctLetter = false;
+    } else if (event.key === 'c'){
+        console.error('This letter is not in the hidden message. Womp womp.');
+        turns -= 1;
+        turnsTracker.innerHTML = turns
+        score -= 4;
+        scoreTracker.innerHTML = score;
+        guessedLetter = true;
+        correctLetter = false;
+    } else if (event.key === 'v'){
+        console.error('This letter is not in the hidden message. Womp womp.');
+        score -= 4;
+        scoreTracker.innerHTML = score;
+        turns -= 1;
+        turnsTracker.innerHTML = turns
+        guessedLetter = true;
+        correctLetter = false;
+    } else if (event.key === 'b'){
+        console.error('This letter is not in the hidden message. Womp womp.');
+        turns -= 1;
+        turnsTracker.innerHTML = turns
+        score -= 4;
+        scoreTracker.innerHTML = score;
+        guessedLetter = true;
+        correctLetter = false;
+    } else if (event.key === 'n'){
+        secretMessageN.innerHTML = "N";
+        turns -= 1;
+        turnsTracker.innerHTML = turns
+        score += 4;
+        scoreTracker.innerHTML = score;
+        guessedLetter = true;
+        numCorrect += 1;
+        correctLetter = true;
+    } else if (event.key === 'm'){
+        console.error('This letter is not in the hidden message. Womp womp.');
+        turns -= 1;
+        turnsTracker.innerHTML = turns
+        score -= 4;
+        scoreTracker.innerHTML = score;
+        guessedLetter = true;
+        correctLetter = false;
+    }
+
+    //disable button based on user input
+    if (score < 0) {
+        scoreTracker.innerHTML = '0';
+    }
+
+
+})
 
 //Create function to disable each button once win condition is met
 let btnCorrect = document.querySelector('.disabledBtnTrue');

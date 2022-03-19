@@ -20,6 +20,19 @@ p {
     display: flex;
     justify-content: right;
 }
+
+#type-letter, #instructions {
+    display: flex;
+    justify-content: center;
+}
+
+
+form {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
 .canvas {
     background-color:lavenderblush;
     display: flex;
@@ -182,7 +195,7 @@ span {
     margin: 0 0 25px 0;
 }
 
-.reset-btn {
+#reset-btn {
     background-color: whitesmoke;
     border: 2px solid brown;
     font-family: 'Quicksand', sans-serif;
@@ -193,7 +206,7 @@ span {
     color: brown;
 }
 
-.reset-btn:hover {
+#reset-btn:hover {
     opacity: 1;
     background-color: white;
     transition: 0.2s;
