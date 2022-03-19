@@ -22,7 +22,6 @@
 
 
 //VARIABLES
-//create event listener --> push letters to div on button press
 let letterKey = document.querySelectorAll('.btn-key');
 let scoreTracker = document.querySelector('#score');
 let turnsTracker = document.querySelector('#turns');
@@ -30,6 +29,7 @@ let resetBtn = document.querySelector('#reset-btn');
 let submitBtn = document.querySelector('#submit');
 let input = document.querySelector('#player-input');
 
+//Progress-logging variables
 let score = 0;
 let turns = 20;
 let guessedLetter = false;
@@ -71,12 +71,12 @@ let secretMessageU = document.querySelector('.U');
 let secretMessageS = document.querySelector('.S');
 let secretMessageL = document.querySelector('.L');
 
-//Keep track of player's progress
+//Will display player's progress on-screen
 scoreTracker.innerHTML = score;
 turnsTracker.innerHTML = turns;
 
 
-//Event listener --> listen for click on keyboard displayed on screen
+//Event listener --> listen for click on keypad displayed on screen
 letterKey.forEach(key => key.addEventListener('click', (event) => {
     event.preventDefault()
 
@@ -341,7 +341,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         
     }
 
-    //score should not display number lower than zero
+    //score should not display number lower than zero ** update this post-project **
     if (score < 0) {
         scoreTracker.innerHTML = '0';
     }
@@ -350,20 +350,25 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         turnsTracker.innerHTML = '0';
     }
 
-    //Prompt user that they have run out of turns (also check if win condition is false)
-    //WIN CONDITION
+    //Prompt user that they have run out of turns (GAME OVER)
+    
+        //GAME OVER
     if (turns === -1 && numCorrect !== 25) {
         turnsTracker.innerHTML = 0;
         window.alert('GAME OVER')
         console.log(event)
+        //prevent player from making additional input
         disable();
         input.setAttribute('disabled', 'disabled');
-        
+       
+        //WIN CONDITION
+        //checking if all correct letters are displayed on-screen 
     } else if (numCorrect === 25) {
         window.alert(`CONGRATULATIONS! YOU'VE DECODED THE HIDDEN MESSAGE!`)
         disable();
         input.setAttribute('disabled', 'disabled');
     }
+
     // Button becomes disabled after being clicked once
     if (guessedLetter === true && correctLetter === false){
         event.target.setAttribute('disabled', 'disabled');
@@ -381,7 +386,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
 }   
 
 
-//WATER YOUR PLANT !!
+//WATER YOUR PLANT !! --> update image based on score
 let img = document.querySelector('.plant');
 
 if (score > 8 && score < 24){
@@ -403,6 +408,7 @@ if (score > 8 && score < 24){
 input.addEventListener('keydown', (event) => {
     // event.preventDefault();
 
+    //check for individual key presses on keyboard
     if(event.key === 'q'){
         console.error(`"${event.key}" does not appear in the puzzle ):`);
         turns -= 1;
@@ -663,22 +669,23 @@ input.addEventListener('keydown', (event) => {
         turnsTracker.innerHTML = '0';
     }
 
-    //WIN CONDITION
+    //GAME OVER
     if (turns === -1 && numCorrect !== 25) {
         turnsTracker.innerHTML = 0;
         window.alert('GAME OVER')
         console.log(event)
         disable();
-        
+
+     //WIN CONDITION   
     } else if (numCorrect === 25) {
         window.alert(`CONGRATULATIONS! YOU'VE DECODED THE HIDDEN MESSAGE!`)
         disable();
     }
 
-
 })
 
-//Create function to disable each button once win condition is met
+//DISABLE BUTTONS
+  //Create function to disable each button once win condition is met
 let btnCorrect = document.querySelector('.disabledBtnTrue');
 
 function disable() {
@@ -686,12 +693,9 @@ for (let i = 0; i < letterKey.length; i++) {
     letterKey[i].setAttribute('disabled', 'disabled');
     letterKey[i].setAttribute('class', 'disabledBtn');
     }
-
-    // btnCorrect.setAttribute('class', 'disabledBtn');
 }
 
 //RESET PUZZLE --> refreshes page (eventually want to reset all var/values)
-
 function resetGame() {
     resetBtn.reset();
 }

@@ -15,18 +15,23 @@
 <h1>CHLOROPHYLL</h1>
 <h2>What will you grow today?</h2>
 
+<!--Progress trackers -->
 <p>SCORE: <span id="score"></span></p>
 <p>TURNS LEFT: <span id="turns"></span></p>
 
+<!-- Player can reset (reload) puzzle at any time -->
 <div class="reset-btn-container">
     <input id="reset-btn" type="button" value="RESET PUZZLE">
 </div>
 
+<!-- "Canvas" for image (which will update based on user input)-->
 <div class="canvas">
 <img class="plant" src="plant-pot.gif" alt="Growing plant animation">
 </div>
 
+<!-- Hidden Message displays in this container-->
 <div class="message-container">
+
 <!-- Secret message is: "Don't forget to water yourself"-->
 <div class="secret-message">
     <div class="secret-letter D"></div>
@@ -34,6 +39,7 @@
     <div class="secret-letter N"></div>
     '
     <div class="secret-letter T"></div>
+
 <!-- Add empty divs to create space inbetween letters-->
     <div class="secret-space"></div>
 
@@ -50,6 +56,7 @@
     <div class="secret-letter O-3"></div>
 </div>
 
+<!-- Added additional divs to create line breaks in hidden phrase -->
 <div class="secret-message2">
     <div class="secret-space"></div>
 
@@ -73,13 +80,16 @@
     </div>
 </div>
 
+
+<!-- Quick instruction for player! -->
 <p id="instructions">Try to solve the hidden message!</p>
+
+<!-- KEEBS -->
 <!--User can input letters w/ external keyboard -->
 <form>
     <input id="player-input" placeholder="Type a letter here!">
     <!-- <input id="submit" type="button" value="Guess Letter!"> -->
 </form>
-
 
 <!-- or they may select letters w/ the on-screen keyboard-->
 <p id="type-letter">OR....click a letter below using the on-screen keypad!</p>
