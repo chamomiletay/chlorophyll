@@ -21,7 +21,7 @@
     // attach "how to play" link that links to set of instructions that player can access (or window prompt)
 
 
-
+//VARIABLES
 //create event listener --> push letters to div on button press
 let letterKey = document.querySelectorAll('.btn-key');
 let scoreTracker = document.querySelector('#score');
@@ -71,6 +71,7 @@ let secretMessageU = document.querySelector('.U');
 let secretMessageS = document.querySelector('.S');
 let secretMessageL = document.querySelector('.L');
 
+//Keep track of player's progress
 scoreTracker.innerHTML = score;
 turnsTracker.innerHTML = turns;
 
@@ -80,13 +81,14 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
     event.preventDefault()
 
     if(event.target.value === "Q"){
-        console.error('This letter is not in the hidden message. Womp womp.');
+        console.error(`"${event.target.value}" does not appear in the puzzle ):`);
         turns -= 1;
         turnsTracker.innerHTML = turns
         score -= 4;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
         correctLetter = false;
+
     } else if (event.target.value === "W"){
         secretMessageW.innerHTML = "W";
         turns -= 1;
@@ -96,6 +98,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         guessedLetter = true;
         numCorrect += 1;
         correctLetter = true;
+
     } else if (event.target.value === "E"){
         secretMessageE.innerHTML = "E";
         secretMessageEtwo.innerHTML = "E";
@@ -107,6 +110,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         guessedLetter = true;
         numCorrect += 3;
         correctLetter = true;
+        
     } else if (event.target.value === "R"){
         secretMessageR.innerHTML = "R";
         secretMessageRtwo.innerHTML = "R";
@@ -118,6 +122,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         guessedLetter = true;
         numCorrect += 3;
         correctLetter = true;
+        
     } else if (event.target.value === "T"){
         secretMessageT.innerHTML = "T";
         secretMessageTtwo.innerHTML = "T";
@@ -130,6 +135,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         guessedLetter = true;
         numCorrect += 4;
         correctLetter = true;
+        
     } else if (event.target.value === "Y"){
         secretMessageY.innerHTML = "Y";
         score += 4;
@@ -139,6 +145,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         guessedLetter = true;
         numCorrect += 1;
         correctLetter = true;
+        
     } else if (event.target.value === "U"){
         secretMessageU.innerHTML = "U";
         score += 4;
@@ -148,14 +155,16 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         guessedLetter = true;
         numCorrect += 1;
         correctLetter = true;
+        
     } else if (event.target.value === "I"){
-        console.error('This letter is not in the hidden message. Womp womp.');
+        console.error(`"${event.target.value}" does not appear in the puzzle ):`);
         score -= 4;
         scoreTracker.innerHTML = score;
         turns -= 1;
         turnsTracker.innerHTML = turns
         guessedLetter = true;
         correctLetter = false;
+        
     } else if (event.target.value === "O"){
         secretMessageO.innerHTML = "O";
         secretMessageOTwo.innerHTML = "O";
@@ -168,14 +177,16 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         guessedLetter = true;
         numCorrect += 4;
         correctLetter = true;
+        
     } else if (event.target.value === "P"){
-        console.error('This letter is not in the hidden message. Womp womp.');
+        console.error(`"${event.target.value}" does not appear in the puzzle ):`);
         turns -= 1;
         turnsTracker.innerHTML = turns
         score -= 4;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
         correctLetter = false;
+        
     } else if (event.target.value === "A"){
         secretMessageA.innerHTML = "A";
         turns -= 1;
@@ -185,6 +196,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         guessedLetter = true;
         numCorrect += 1;
         correctLetter = true;
+        
     } else if (event.target.value === "S"){
         secretMessageS.innerHTML = "S";
         turns -= 1;
@@ -194,6 +206,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         guessedLetter = true;
         numCorrect += 1;
         correctLetter = true;
+        
     } else if (event.target.value === "D"){
         secretMessageD.innerHTML = "D";
         turns -= 1;
@@ -203,6 +216,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         guessedLetter = true;
         numCorrect += 1;
         correctLetter = true;
+        
     } else if (event.target.value === "F"){
         secretMessageF.innerHTML = "F";
         secretMessageFtwo.innerHTML = "F";
@@ -213,6 +227,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         guessedLetter = true;
         numCorrect += 2;
         correctLetter = true;
+        
     } else if (event.target.value === "G"){
         secretMessageG.innerHTML = "G";
         turns -= 1;
@@ -222,30 +237,34 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         guessedLetter = true;
         numCorrect += 1;
         correctLetter = true;
+        
     } else if (event.target.value === "H"){
-        console.error('This letter is not in the hidden message. Womp womp.');
+        console.error(`"${event.target.value}" does not appear in the puzzle ):`);
         turns -= 1;
         turnsTracker.innerHTML = turns
         score -= 4;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
         correctLetter = false;
+        
     } else if (event.target.value === "J"){
-        console.error('This letter is not in the hidden message. Womp womp.');
+        console.error(`"${event.target.value}" does not appear in the puzzle ):`);
         turns -= 1;
         turnsTracker.innerHTML = turns
         score -= 4;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
         correctLetter = false;
+        
     } else if (event.target.value === "K"){
-        console.error('This letter is not in the hidden message. Womp womp.');
+        console.error(`"${event.target.value}" does not appear in the puzzle ):`);
         turns -= 1;
         turnsTracker.innerHTML = turns
         score -= 4;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
         correctLetter = false;
+        
     } else if (event.target.value === "L"){
         secretMessageL.innerHTML = "L";
         score += 4;
@@ -255,46 +274,52 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         guessedLetter = true;
         numCorrect += 1;
         correctLetter = true;
+        
     } else if (event.target.value === "Z"){
-        console.error('This letter is not in the hidden message. Womp womp.');
+        console.error(`"${event.target.value}" does not appear in the puzzle ):`);
         turns -= 1;
         turnsTracker.innerHTML = turns
         score -= 4;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
         correctLetter = false;
+        
     } else if (event.target.value === "X"){
-        console.error('This letter is not in the hidden message. Womp womp.');
+        console.error(`"${event.target.value}" does not appear in the puzzle ):`);
         turns -= 1;
         turnsTracker.innerHTML = turns
         score -= 4;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
         correctLetter = false;
+        
     } else if (event.target.value === "C"){
-        console.error('This letter is not in the hidden message. Womp womp.');
+        console.error(`"${event.target.value}" does not appear in the puzzle ):`);
         turns -= 1;
         turnsTracker.innerHTML = turns
         score -= 4;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
         correctLetter = false;
+        
     } else if (event.target.value === "V"){
-        console.error('This letter is not in the hidden message. Womp womp.');
+        console.error(`"${event.target.value}" does not appear in the puzzle ):`);
         score -= 4;
         scoreTracker.innerHTML = score;
         turns -= 1;
         turnsTracker.innerHTML = turns
         guessedLetter = true;
         correctLetter = false;
+        
     } else if (event.target.value === "B"){
-        console.error('This letter is not in the hidden message. Womp womp.');
+        console.error(`"${event.target.value}" does not appear in the puzzle ):`);
         turns -= 1;
         turnsTracker.innerHTML = turns
         score -= 4;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
         correctLetter = false;
+        
     } else if (event.target.value === "N"){
         secretMessageN.innerHTML = "N";
         turns -= 1;
@@ -304,14 +329,16 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         guessedLetter = true;
         numCorrect += 1;
         correctLetter = true;
+        
     } else if (event.target.value === "M"){
-        console.error('This letter is not in the hidden message. Womp womp.');
+        console.error(`"${event.target.value}" does not appear in the puzzle ):`);
         turns -= 1;
         turnsTracker.innerHTML = turns
         score -= 4;
         scoreTracker.innerHTML = score;
         guessedLetter = true;
         correctLetter = false;
+        
     }
 
     //score should not display number lower than zero
@@ -348,7 +375,7 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
 }   
 
 
-//Make your plant GROW !!
+//WATER YOUR PLANT !!
 let img = document.querySelector('.plant');
 
 if (score > 8 && score < 24){
@@ -365,12 +392,13 @@ if (score > 8 && score < 24){
 
 }))
 
+
 //EXTERNAL KEYBOARD EVENT LISTENER
 input.addEventListener('keydown', (event) => {
     // event.preventDefault();
 
     if(event.key === 'q'){
-        console.error('This letter is not in the hidden message. Womp womp.');
+        console.error(`"${event.key}" does not appear in the puzzle ):`);
         turns -= 1;
         turnsTracker.innerHTML = turns
         score -= 4;
@@ -439,7 +467,7 @@ input.addEventListener('keydown', (event) => {
         numCorrect += 1;
         correctLetter = true;
     } else if (event.key === 'i'){
-        console.error('This letter is not in the hidden message. Womp womp.');
+        console.error(`"${event.key}" does not appear in the puzzle ):`);
         score -= 4;
         scoreTracker.innerHTML = score;
         turns -= 1;
@@ -459,7 +487,7 @@ input.addEventListener('keydown', (event) => {
         numCorrect += 4;
         correctLetter = true;
     } else if (event.key === 'p'){
-        console.error('This letter is not in the hidden message. Womp womp.');
+        console.error(`"${event.key}" does not appear in the puzzle ):`);
         turns -= 1;
         turnsTracker.innerHTML = turns
         score -= 4;
@@ -513,7 +541,7 @@ input.addEventListener('keydown', (event) => {
         numCorrect += 1;
         correctLetter = true;
     } else if (event.key === 'h'){
-        console.error('This letter is not in the hidden message. Womp womp.');
+        console.error(`"${event.key}" does not appear in the puzzle ):`);
         turns -= 1;
         turnsTracker.innerHTML = turns
         score -= 4;
@@ -521,7 +549,7 @@ input.addEventListener('keydown', (event) => {
         guessedLetter = true;
         correctLetter = false;
     } else if (event.key === 'j'){
-        console.error('This letter is not in the hidden message. Womp womp.');
+        console.error(`"${event.key}" does not appear in the puzzle ):`);
         turns -= 1;
         turnsTracker.innerHTML = turns
         score -= 4;
@@ -529,7 +557,7 @@ input.addEventListener('keydown', (event) => {
         guessedLetter = true;
         correctLetter = false;
     } else if (event.key === 'k'){
-        console.error('This letter is not in the hidden message. Womp womp.');
+        console.error(`"${event.key}" does not appear in the puzzle ):`);
         turns -= 1;
         turnsTracker.innerHTML = turns
         score -= 4;
@@ -546,7 +574,7 @@ input.addEventListener('keydown', (event) => {
         numCorrect += 1;
         correctLetter = true;
     } else if (event.key === 'z'){
-        console.error('This letter is not in the hidden message. Womp womp.');
+        console.error(`"${event.key}" does not appear in the puzzle ):`);
         turns -= 1;
         turnsTracker.innerHTML = turns
         score -= 4;
@@ -562,7 +590,7 @@ input.addEventListener('keydown', (event) => {
         guessedLetter = true;
         correctLetter = false;
     } else if (event.key === 'c'){
-        console.error('This letter is not in the hidden message. Womp womp.');
+        console.error(`"${event.key}" does not appear in the puzzle ):`);
         turns -= 1;
         turnsTracker.innerHTML = turns
         score -= 4;
@@ -570,7 +598,7 @@ input.addEventListener('keydown', (event) => {
         guessedLetter = true;
         correctLetter = false;
     } else if (event.key === 'v'){
-        console.error('This letter is not in the hidden message. Womp womp.');
+        console.error(`"${event.key}" does not appear in the puzzle ):`);
         score -= 4;
         scoreTracker.innerHTML = score;
         turns -= 1;
@@ -578,7 +606,7 @@ input.addEventListener('keydown', (event) => {
         guessedLetter = true;
         correctLetter = false;
     } else if (event.key === 'b'){
-        console.error('This letter is not in the hidden message. Womp womp.');
+        console.error(`"${event.key}" does not appear in the puzzle ):`);
         turns -= 1;
         turnsTracker.innerHTML = turns
         score -= 4;
@@ -595,7 +623,7 @@ input.addEventListener('keydown', (event) => {
         numCorrect += 1;
         correctLetter = true;
     } else if (event.key === 'm'){
-        console.error('This letter is not in the hidden message. Womp womp.');
+        console.error(`"${event.key}" does not appear in the puzzle ):`);
         turns -= 1;
         turnsTracker.innerHTML = turns
         score -= 4;
@@ -604,9 +632,37 @@ input.addEventListener('keydown', (event) => {
         correctLetter = false;
     }
 
-    //disable button based on user input
+
+    //WATER YOUR PLANT !!
+    let img = document.querySelector('.plant');
+
+    if (score > 8 && score < 24){
+        img.src = 'frame1.gif';
+    } else if (score > 24 && score < 40){
+        img.src = 'frame2.gif';
+    } else if (score > 40 && score < 56){
+        img.src = 'frame3.gif'
+    } else if (score > 56 && score < 80){
+        img.src = 'frame4.gif'
+    } else if (score > 90 && score < 100){
+        img.src = 'frame5.gif'
+    }
+
+    //score should not display less than '0'
     if (score < 0) {
         scoreTracker.innerHTML = '0';
+    }
+
+    //WIN CONDITION
+    if (turns === -1) {
+        turnsTracker.innerHTML = 0;
+        window.alert('GAME OVER')
+        console.log(event)
+        disable();
+        
+    } else if (numCorrect === 25) {
+        window.alert(`CONGRATULATIONS! YOU'VE DECODED THE HIDDEN MESSAGE!`)
+        disable();
     }
 
 
