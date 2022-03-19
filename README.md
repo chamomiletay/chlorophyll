@@ -44,3 +44,4 @@ I thoroughly enjoyed the whole course of the project- from planning out my sched
 I would also like to revisit the score system so that the score cannot go lower than '0'. The inner HTML of the score-tracking elements currently displays 0 until the player achieves a higher score (to avoid a negative value displaying on-screen). This will require additional conditions, which I unfortunately ran out of time to incorporate.
 
 ### ✨ Like what you see? Check out the game [*here!*](https://chamomiletay.github.io/spaceman/)✨
+    (Live Server Link: http://127.0.0.1:5500/index.html)
