@@ -357,10 +357,12 @@ letterKey.forEach(key => key.addEventListener('click', (event) => {
         window.alert('GAME OVER')
         console.log(event)
         disable();
+        input.setAttribute('disabled', 'disabled');
         
     } else if (numCorrect === 25) {
         window.alert(`CONGRATULATIONS! YOU'VE DECODED THE HIDDEN MESSAGE!`)
         disable();
+        input.setAttribute('disabled', 'disabled');
     }
     // Button becomes disabled after being clicked once
     if (guessedLetter === true && correctLetter === false){
