@@ -690,3 +690,13 @@ for (let i = 0; i < letterKey.length; i++) {
     // btnCorrect.setAttribute('class', 'disabledBtn');
 }
 
+//RESET PUZZLE --> refreshes page (eventually want to reset all var/values)
+
+function resetGame() {
+    resetBtn.reset();
+}
+
+resetBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    window.location.reload();
+});
